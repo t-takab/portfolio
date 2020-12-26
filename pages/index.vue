@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">portfolio</h1>
+      <h1 class="title">my-project</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -21,12 +21,19 @@
           GitHub
         </a>
       </div>
+      <Square />
+      <Square />
     </div>
   </div>
 </template>
 
 <script>
-export default {}
+import Square from '~/components/Square.vue'
+export default {
+  components: {
+    Square,
+  },
+}
 </script>
 
 <style>
