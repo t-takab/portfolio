@@ -1,21 +1,34 @@
 <template>
   <div
     class="box"
-    :class="{ 'toggle-color': isToggle }"
+    :style="{ 'background-color': displayColor }"
     @click="toggleColor"
   ></div>
 </template>
 
 <script>
 export default {
+  props: {
+    primaryColor: String,
+    secondaryColor: String,
+  },
   data() {
     return {
-      isToggle: false,
+      displayColor: this.primaryColor,
+      first: this.primaryColor,
+      second: this.secondaryColor,
     }
   },
   methods: {
     toggleColor() {
-      this.isToggle = !this.isToggle
+      console.log('primary_color' + this.primaryColor)
+      console.log('secondary_color' + this.secondaryColor)
+      console.log('display_color' + this.displayColor)
+      if (this.displayColor === this.first) {
+        this.displayColor = this.second
+      } else {
+        this.displayColor = this.first
+      }
     },
   },
 }
@@ -25,10 +38,5 @@ export default {
 .box {
   width: 200px;
   height: 200px;
-  background-color: #0ff;
-}
-
-.toggle-color {
-  background-color: orange;
 }
 </style>

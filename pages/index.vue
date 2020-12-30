@@ -2,7 +2,7 @@
   <div class="container">
     <div>
       <Logo />
-      <h1 class="title">my-project</h1>
+      <h1 class="title">portfolio</h1>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
@@ -21,8 +21,8 @@
           GitHub
         </a>
       </div>
-      <Square />
-      <Square />
+      <Square primary-color="#66cdaa" secondary-color="#00cc88" />
+      <Square primary-color="#87ceeb" secondary-color="#91e0ff" />
     </div>
   </div>
 </template>
